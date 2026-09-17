@@ -1,8 +1,8 @@
 #BMI tells us a person's weight relative to their height.
 
-def bmi_calculator(weigth,height):
-   bmi =weight/(height**2)
-   return bmi
+def bmi_calculator(weight,height):
+   bmi =weight/((height/100)**2)
+   return round(bmi,2)
  
 def bmr_calculator(gender,age,weight,height):
    if gender=="male":
@@ -25,20 +25,25 @@ def tdee_calculator(bmr,activity):
                        "Extra_Active":1.90
                       }
       tdee=bmr*activity_factor[activity]
-      return tdee
+      return round(tdee,2)
     
 # This is where your application estimates a daily calorie target based on the user's goal.
 # A simple educational model can use:
 
 def calorie_target(tdee,aim):
-   if aim=="maintain":
+   if aim=="weight maintain":
       calorie=tdee
-   elif aim=="loss":
+   elif aim=="weigth loss":
      calorie==tdee-400
-   elif aim=="gain":
+   elif aim=="weight gain":
       calorie=tdee+300
-   return calorie
- 
+   return round(calorie,2)
+
+
+# print(f"bmi is :{bmi_calculator(74,166)}")
+# bmr=bmr_calculator("male",24,74,166)
+# tdee=tdee_calculator(bmr,"Extra_Active")
+# print("killo calorie you need is:",calorie_target(tdee,"weight gain"))
 
      
     
