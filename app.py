@@ -7,5 +7,5 @@ import os
 st.set_page_config(page_title="Health Assistant",
               page_icon="🤸",
               layout="wide")
-st.title("AI Health Assistant 🤸")
+st.title("AI Health Assistant 🏋️")
 st.header("Health Information")
