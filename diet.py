@@ -40,10 +40,10 @@ def calorie_target(tdee,aim):
    return round(calorie,2)
 
 
-# print(f"bmi is :{bmi_calculator(74,166)}")
-# bmr=bmr_calculator("male",24,74,166)
-# tdee=tdee_calculator(bmr,"Extra_Active")
-# print("killo calorie you need is:",calorie_target(tdee,"weight gain"))
+print(f"bmi is :{bmi_calculator(74,166)}")
+bmr=bmr_calculator("male",24,74,166)
+tdee=tdee_calculator(bmr,"Extra_Active")
+print("killo calorie you need is:",calorie_target(tdee,"weight gain"))
 
      
     
