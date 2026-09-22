@@ -8,3 +8,4 @@ langchain-text-splitters
 faiss-cpu
 pypdf
 sentence-transformers
+openai
