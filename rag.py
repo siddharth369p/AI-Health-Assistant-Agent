@@ -2,7 +2,7 @@ import os
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
-#vector database which stores the pdf faiss
+#vector database which stores the pdf by  faiss
 from langchain_community.vectorstores import FAISS 
 PDF_file="data/nutrition.pdf"
 
