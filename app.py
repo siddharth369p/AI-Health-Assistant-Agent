@@ -34,7 +34,7 @@ weight =st.sidebar.number_input("weight(kg)",1,120)
 height=st.sidebar.number_input("height(cm)",100,200)
 
 activity = st.sidebar.selectbox(
-    "Activity",
+    "🏃Activity",
     [
         "Sedentary",
         "Lightly_Active",
@@ -43,10 +43,10 @@ activity = st.sidebar.selectbox(
         "Extra_Active"
     ]
 )
-aim=st.sidebar.selectbox("Aim",["Weight maintain","Weight loss","Weight gain"])
+aim=st.sidebar.selectbox("🎯Aim",["Weight maintain","Weight loss","Weight gain"])
 
-diet_type=st.sidebar.selectbox("Diet Type",["Vegeterian","Non Vegeterian"])
-allergies=st.sidebar.selectbox("Allergies",["Allergies","None"])
+diet_type=st.sidebar.selectbox("🥗Diet Type",["Vegeterian","Non Vegeterian"])
+allergies=st.sidebar.selectbox("⚠️Allergies",["Allergies","None"])
 
 
 #------------------------------------------------------------------------------#
@@ -64,12 +64,12 @@ col3=col3.metric("TDEE",f"{tdee}kcal🔥")
 col4=col4.metric("Calorie Target",f"{calories}kcal🔥")
 
 
-tab1,tab2=st.tabs(['Diet Recommandation',"Health Assitance"])
+tab1,tab2=st.tabs(['🥗Diet Recommandation',"🤖AI Health Assitance"])
 
 with tab1:
     if st.button("Recommend Diet"):
         if client:
-            with st.spinner("creating Diet......."):
+            with st.spinner("creating Diet with 🤖......."):
                 try:
                     db=load_rag()
                     search_query=f"""diet_type{diet_type}
@@ -118,22 +118,14 @@ Weight: {weight} kg
 Activity Level: {activity}
 
 
-
 aim: {aim}
-
 
 
 Diet Type: {diet_type}
 
-
-
 Food Allergy: {allergies}
 
-
-
 Estimated BMI: {bmi}
-
-
 
 Estimated BMR: {bmr} kcal/day
 
@@ -141,19 +133,11 @@ Estimated BMR: {bmr} kcal/day
 
 Estimated TDEE: {tdee} kcal/day
 
-
-
 Estimated Daily Calorie Target:
 
 {calories} kcal/day
 
-
-
-
-
 Create the following:
-
-
 
 1\. Breakfast
 
@@ -238,8 +222,6 @@ You are an AI health and nutrition
 
 assistant.
 
-
-
 Use the following knowledge to answer
 
 the user's question.
@@ -252,10 +234,7 @@ USER QUESTION:
 
 {question}
 
-
-
 INSTRUCTIONS:
-
 
 
 \- Answer clearly.
@@ -294,8 +273,22 @@ and wellness purposes.
                          }])
         answer=response.choices[0].message.content
         st.markdown(answer)
+st.markdown(
+    """
+    <div class="footer">
 
+        🩺 AI Health Assistant 
+        Built with Python + Streamlit + RAG + LLM
 
+        
+
+        ⚠️ This application provides general educational information
+        and is not a substitute for professional medical advice.
+
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 
 
