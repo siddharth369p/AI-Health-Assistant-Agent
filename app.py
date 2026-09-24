@@ -66,7 +66,7 @@ col4=col4.metric("Calorie Target",f"{calories}kcal🔥")
 
 tab1,tab2=st.tabs(['Diet Recommandation',"Health Assitance"])
 
-if tab1:
+with tab1:
     if st.button("Recommend Diet"):
         if client:
             with st.spinner("creating Diet......."):
@@ -225,7 +225,7 @@ IMPORTANT RULES:
                 except:
                     st.error("Rag is not connected")
 
-if tab2:
+with tab2:
     question=st.text_area("Ask About Health",
                  placeholder="eg:Good source of veg protein")
     if st.button("Ask AI"):
