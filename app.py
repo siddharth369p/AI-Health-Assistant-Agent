@@ -64,7 +64,7 @@ col3=col3.metric("TDEE",f"{tdee}kcal🔥")
 col4=col4.metric("Calorie Target",f"{calories}kcal🔥")
 
 
-tab1,tab2=st.tabs(['🥗Diet Recommandation',"🤖AI Health Assitance"])
+tab1,tab2=st.tabs(['🥗Diet Recommandation',"🤖AI Health🩺Assitance"])
 
 with tab1:
     if st.button("Recommend Diet"):
@@ -279,8 +279,6 @@ st.markdown(
 
         🩺 AI Health Assistant 
         Built with Python + Streamlit + RAG + LLM
-
-        
 
         ⚠️ This application provides general educational information
         and is not a substitute for professional medical advice.
