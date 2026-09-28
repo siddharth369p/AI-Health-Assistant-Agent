@@ -280,6 +280,7 @@ st.markdown(
         🩺 AI Health Assistant 
         Built with Python + Streamlit + RAG + LLM
         
+        
         ⚠️ This application provides general educational information
         and is not a substitute for professional medical advice.
     </div>
