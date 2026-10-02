@@ -277,7 +277,7 @@ st.markdown(
     """
     <div class="footer">
 
-        🩺 AI Health Assistant 
+        🩺 AI Health Assistant 🤖
         Built with Python + Streamlit + RAG + LLM
         
         
